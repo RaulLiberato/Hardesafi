@@ -21,6 +21,6 @@ function verificaNulo(usuario){
     form.classList.add('was-validated')
 
     if(usuario.email == "raul@gmail.com" && usuario.senha == "Batatadoce15"){
-        window.location.href = "https://www.google.com.br/"
+        window.location.href = "file:///F:/Hardesafi-main/views/home.html"
     }
 }

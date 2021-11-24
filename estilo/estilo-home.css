@@ -1,0 +1,235 @@
+:root {
+  --background-color: #2e2756;
+  --text-title-color: #ffffff;
+  --background-form-login-color: #433e5a;
+  --background-input-login-color: #c4c4c4;
+  --text-input-color: #4a4a4a;
+  --text-link-color: #b8b8b8;
+  --button-save-color: #36a634;
+  --button-clean-color: #cf1717;
+  --error-input-form-color: #f9c9c9;
+  --background-home-color: #f0eff6;
+  --hover-menu-color: #2e236b;
+}
+
+body {
+  margin: 0%;
+  font-family: "Fredoka One", cursive;
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+.container-fluid {
+  display: flex;
+  padding: 0px;
+}
+
+.nav-vertical {
+  width: 6%;
+  height: 88vh;
+}
+
+.buttons {
+  border: 0px;
+  padding: 0px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.buttons button {
+  margin-top: 4rem;
+  background-color: #f6f6f6;
+  border: none;
+}
+
+.blackiconcolor {
+  color: #433e5a;
+}
+
+#settings {
+  margin-bottom: 3rem;
+  margin-top: 33rem;
+}
+
+.nav-horizontal {
+  background-color: #433e5a;
+}
+
+.body {
+  width: 100%;
+}
+
+.nav-horizontal {
+  height: 13%;
+  color: var(--text-title-color);
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  margin-left: 3rem;
+}
+
+.logo p {
+  margin: 0px;
+  margin-top: 1.5rem;
+  font-size: 3rem;
+}
+
+#tm {
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+.frase {
+  width: 60%;
+  margin-left: 5rem;
+  margin-top: 2.5rem;
+  font-size: 2rem;
+}
+
+.nav-horizontal img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 14rem;
+}
+
+.content {
+  background-color: var(--background-home-color);
+  height: 100%;
+}
+
+.newChallenge {
+  display: flex;
+  padding-top: 3rem;
+  margin-left: 2.5rem;
+}
+
+.text p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.text hr {
+  height: 10px;
+  width: 8rem;
+  border-radius: 10px;
+  background-color: #433e5a;
+  border: none;
+  margin: 0;
+  opacity: 1;
+}
+
+.button button {
+  border-radius: 15px;
+  height: 40px;
+  width: 40px;
+  margin-top: 7px;
+  margin-left: 1rem;
+  text-align: center;
+  background-color: #665e87;
+  border-color: #665e87;
+}
+
+.button button:hover {
+  background-color: var(--background-form-login-color);
+}
+
+.button button:focus {
+  background-color: var(--background-form-login-color);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(46, 39, 86, 0.6);
+}
+
+.challenge {
+  margin-top: 3rem;
+}
+
+.table {
+  width: 95%;
+  margin: auto;
+}
+
+td:nth-child(1) {
+  padding-left: 1rem;
+}
+
+td:nth-child(2) {
+  width: 20%;
+  max-width: 20%;
+  word-break: break-all;
+}
+
+td:nth-child(3) {
+  width: 6%;
+}
+
+td:nth-child(4) {
+  width: 7%;
+}
+
+td:nth-child(5) {
+  width: 65%;
+  max-width: 65%;
+  word-break: break-all;
+}
+
+th:nth-child(6) {
+  padding-right: 1rem;
+}
+
+th:nth-child(8) {
+  padding-right: 1rem;
+}
+
+.button-edit {
+  height: 100%;
+  border: 0;
+  background-color: var(--background-home-color);
+}
+
+.button-edit:hover {
+  background-color: var(--background-color);
+  color: var(--text-title-color);
+  border-radius: 5px;
+}
+
+.button-delet {
+  border: 0;
+  background-color: var(--background-home-color);
+}
+
+.button-delet:hover {
+  background-color: var(--background-color);
+  color: var(--text-title-color);
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background-color: #ced4da;
+  border: #ced4da;
+}
+
+.btn-secondary:hover {
+  background-color: #9aa6b3;
+}
+
+.form-control {
+  resize: none;
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+  border: black;
+}
+
+.hidden {
+  display: none;
+}

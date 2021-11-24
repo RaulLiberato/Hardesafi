@@ -115,4 +115,10 @@ body{
     text-align: center;
 }
 
+/* HOME */
+
+.nav-vertical{
+    background-color: var(--background-home-color);
+}
+
 
