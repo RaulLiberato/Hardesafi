@@ -26,15 +26,17 @@ body {
 
 .nav-vertical {
   width: 6%;
-  height: 88vh;
+  height: 87vh;
 }
 
 .buttons {
   border: 0px;
   padding: 0px;
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: auto;
   margin-top: 1rem;
 }
@@ -49,11 +51,6 @@ body {
   color: #433e5a;
 }
 
-#settings {
-  margin-bottom: 3rem;
-  margin-top: 33rem;
-}
-
 .nav-horizontal {
   background-color: #433e5a;
 }
@@ -63,10 +60,11 @@ body {
 }
 
 .nav-horizontal {
-  height: 13%;
+  height: 15%;
   color: var(--text-title-color);
   display: flex;
   width: 100%;
+
 }
 
 .logo {
@@ -86,7 +84,7 @@ body {
 }
 
 .frase {
-  width: 60%;
+  width: 70%;
   margin-left: 5rem;
   margin-top: 2.5rem;
   font-size: 2rem;
@@ -98,7 +96,11 @@ body {
   border-radius: 100%;
   display: flex;
   margin-top: 25px;
-  margin-left: 14rem;
+  margin-left: 0rem;
+}
+
+.dropdown {
+  display: none;
 }
 
 .content {
@@ -138,6 +140,12 @@ body {
   border-color: #665e87;
 }
 
+.button i {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .button button:hover {
   background-color: var(--background-form-login-color);
 }
@@ -155,38 +163,70 @@ body {
 .table {
   width: 95%;
   margin: auto;
+  display: table;
 }
 
 td:nth-child(1) {
   padding-left: 1rem;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 td:nth-child(2) {
   width: 20%;
   max-width: 20%;
   word-break: break-all;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 td:nth-child(3) {
-  width: 6%;
+  width: 8%;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 td:nth-child(4) {
-  width: 7%;
+  width: 8%;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 td:nth-child(5) {
   width: 65%;
   max-width: 65%;
   word-break: break-all;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-th:nth-child(6) {
+td:nth-child(6) {
   padding-right: 1rem;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-th:nth-child(8) {
+td:nth-child(7) {
   padding-right: 1rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+td:nth-child(8) {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.hidden-table {
+  visibility: hidden;
+}
+
+.button-down {
+  display: none;
+}
+
+.ul-drop {
+  display: none;
 }
 
 .button-edit {
@@ -232,4 +272,402 @@ th:nth-child(8) {
 
 .hidden {
   display: none;
+}
+
+/*media query*/
+@media screen and (min-width: 1400px) {
+  .nav-horizontal img {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    display: flex;
+    margin-top: 25px;
+    margin-right: 2rem;
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    overflow: hidden;
+  }
+
+  .nav-vertical {
+    width: 6%;
+  }
+
+  .nav-horizontal {
+    height: 18%;
+  }
+
+  .nav-horizontal img {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    display: flex;
+    margin-top: 25px;
+    margin-right: 2rem;
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-vertical {
+    width: 6%;
+  }
+
+  .buttons {
+    border: 0px;
+    padding: 0px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1rem;
+    margin-right: 1.3rem;
+  }
+
+  .logo p {
+    margin: 0px;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  #tm {
+    font-size: 0.5rem;
+    padding-top: 10px;
+  }
+
+  .frase {
+    width: 60%;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .frase p {
+    margin-top: 0.5rem;
+  }
+
+  .nav-horizontal img {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    display: flex;
+    margin-top: 25px;
+    margin-right: 2rem;
+    margin-left: 0rem;
+  }
+
+  td:nth-child(3) {
+    width: 12%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  td:nth-child(4) {
+    width: 12%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .nav-horizontal img {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    display: flex;
+    margin-top: 35px;
+    margin-right: 2rem;
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo p {
+    margin: 0px;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .frase {
+    width: 60%;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .nav-horizontal img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-right: 2rem;
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .buttons {
+    border: 0px;
+    padding: 0px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  .buttons button {
+    font-size: 0.7rem;
+  }
+
+  .frase {
+    width: 60%;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .nav-horizontal img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-right: 2rem;
+    margin-left: 0rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .text hr {
+    height: 5px;
+    width: 8rem;
+    border-radius: 10px;
+    background-color: #433e5a;
+    border: none;
+    margin: 0;
+    opacity: 1;
+  }
+
+  .button button {
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    margin-top: 4px;
+    margin-left: 1rem;
+    text-align: center;
+    background-color: #665e87;
+    border-color: #665e87;
+  }
+
+  .button i {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  td:nth-child(3) {
+    width: 12%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  td:nth-child(4) {
+    width: 12%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  td:nth-child(5) {
+    width: 65%;
+    max-width: 65%;
+    word-break: break-all;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .table {
+    width: 95%;
+    margin: auto;
+    display: table;
+    font-size: 0.7rem;
+  }
+
+  .modal-content {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .frase {
+    width: 60%;
+    margin-left: 2rem;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding-right: 0px !important;
+  }
+
+  .nav-vertical {
+    display: none;
+  }
+
+  .nav-horizontal {
+    height: 7rem;
+  }
+
+  .nav-horizontal img {
+    display: none;
+  }
+
+  .frase p {
+    display: none;
+  }
+
+  .dropdown {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: -70%;
+  }
+
+  .button-drop {
+    height: 2rem;
+    width: 3rem;
+    margin-top: 2.5rem;
+    margin-left: 6rem;
+  }
+
+  .button-drop {
+    background-color: #534b85;
+  }
+
+  .button-drop:focus {
+    background-color: #353056;
+  }
+
+  .dropdown-menu {
+    font-size: 0.8rem;
+  }
+
+  .dropdown .content {
+    width: 100%;
+  }
+
+  .newChallenge {
+    margin-left: 3rem;
+  }
+
+  td:nth-child(1) {
+    padding-left: 1rem;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  td:nth-child(2) {
+    width: 25%;
+    word-break: break-all;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  td:nth-child(3) {
+    width: 8%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  td:nth-child(4) {
+    width: 8%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  td:nth-child(5) {
+    width: 42%;
+    max-width: 42%;
+    word-break: break-all;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .modal-content {
+    width: 80%;
+    font-size: 0.8rem;
+    margin: auto;
+  }
+
+  .content {
+    height: 85vh;
+  }
+
+  .modal-title {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .button-drop {
+    height: 2rem;
+    width: 3rem;
+    margin-top: 2.5rem;
+    margin-left: 8rem;
+  }
+
+  td:nth-child(6) {
+    visibility: hidden;
+    padding: 0px;
+  }
+
+  td:nth-child(7) {
+    visibility: hidden;
+    padding: 0px;
+  }
+
+  td:nth-child(8) {
+    margin-left: -10%;
+  }
+
+  .button-edit {
+    display: none;
+  }
+
+  .button-delet {
+    display: none;
+  }
+
+  .font-size {
+    font-size: 0.7rem;
+    padding: 0px;
+  }
+
+  .ul-style {}
+
+  .size {
+  }
+
+  .dropdown-menu {
+    min-width: 0rem !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .button-drop {
+    height: 2rem;
+    width: 3rem;
+    margin-top: 2.5rem;
+    margin-left: 6rem;
+  }
 }

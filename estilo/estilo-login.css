@@ -1,124 +1,136 @@
-:root{
-    --background-color: #2E2756;
-    --text-title-color: #FFFFFF;
-    --background-form-login-color: #433E5A;
-    --background-input-login-color: #C4C4C4;
-    --text-input-color: #4A4A4A;
-    --text-link-color: #B8B8B8;
-    --button-save-color: #36A634;
-    --button-clean-color: #CF1717;
-    --error-input-form-color: #F9C9C9;
-    --background-home-color: #F0EFF6;
-    --hover-menu-color: #2E236B;
+:root {
+  --background-color: #2e2756;
+  --text-title-color: #ffffff;
+  --background-form-login-color: #433e5a;
+  --background-input-login-color: #c4c4c4;
+  --text-input-color: #4a4a4a;
+  --text-link-color: #b8b8b8;
+  --button-save-color: #36a634;
+  --button-clean-color: #cf1717;
+  --error-input-form-color: #f9c9c9;
+  --background-home-color: #f0eff6;
+  --hover-menu-color: #2e236b;
 }
 
-body{
-    background-color: var(--background-color);
-    margin: 0%;
-    font-family: 'Fredoka One', cursive;
+body {
+  background-color: var(--background-color);
+  margin: 0%;
+  font-family: "Fredoka One", cursive;
 }
 
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.background{
-    background-image: url(./img/background.png);
-    background-size: 100%;
-    width: 100%;
-    height: 45rem;
-    border-radius: 20px;
+.background {
+  background-image: url(./img/background.png);
+  background-size: 100%;
+  width: 100%;
+  height: 45rem;
+  border-radius: 20px;
 }
 
-.titulo{
-    color: var(--text-title-color);
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
+.titulo {
+  color: var(--text-title-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
 }
 
 .titulo p {
-    margin: 0px;
-    margin-top: 7rem;
-    font-size: 3rem;
+  margin: 0px;
+  margin-top: 4rem;
+  font-size: 3rem;
 }
 
-#tm{
-    font-size: 1rem;
-    padding-top: 10px;
+#tm {
+  font-size: 1rem;
+  padding-top: 10px;
 }
 
-.formulario{
-    display: flex;
-    background-color: var(--background-form-login-color);
-    border-radius: 20px;
-    width: 30%;
-    height: 18rem;
-    margin:  2rem auto;
-    justify-content: center;
-    align-items: center;
+.formulario {
+  display: flex;
+  background-color: var(--background-form-login-color);
+  border-radius: 20px;
+  width: 30%;
+  height: 18rem;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
 }
 
-.formulario form{
-    width: 80%;
-    margin: auto;
+.formulario form {
+  width: 80%;
+  margin: auto;
 }
 
-.formulario input{
-    border-radius: 15px;
-    width: 100%;
-    border: 0px;
+.formulario input {
+  border-radius: 15px;
+  width: 100%;
+  border: 0px;
 }
 
-.form-control:focus{
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(255, 255, 255, 0.6);
 }
 
-.form-control:invalid{
-    border-color: var(--button-clean-color);
+.form-control:invalid {
+  border-color: var(--button-clean-color);
 }
 
-.senha{
-    margin-top: 1rem;
+.senha {
+  margin-top: 1rem;
 }
 
-.formulario button{
-    display: flex;
-    justify-content: center;
-    border-radius: 40px;
-    width: 50%;
-    margin: auto;
-    margin-top: 2rem;
-    background-color: #F6F6F6;
-    color: var(--text-input-color);
-    border: #F6F6F6;
+.formulario button {
+  display: flex;
+  justify-content: center;
+  border-radius: 40px;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: #f6f6f6;
+  color: var(--text-input-color);
+  border: #f6f6f6;
 }
 
-.formulario button:hover{
-    background-color: var(--text-input-color);
-    color: #F6F6F6;
+.formulario button:hover {
+  background-color: var(--text-input-color);
+  color: #f6f6f6;
 }
 
-.formulario button:focus{
-    background-color: var(--text-input-color);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+.formulario button:focus {
+  background-color: var(--text-input-color);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(255, 255, 255, 0.6);
 }
 
-.background a{
-    display: block;
-    color: var(--text-link-color);
-    text-align: center;
+.background a {
+  display: block;
+  color: var(--text-link-color);
+  text-align: center;
 }
 
-/* HOME */
-
-.nav-vertical{
-    background-color: var(--background-home-color);
+.or {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  color: var(--text-link-color);
 }
 
-
+.or hr {
+  width: 4rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 12px;
+  height: 5px;
+  size: 5px;
+  border-radius: 5px;
+  opacity: 1;
+}

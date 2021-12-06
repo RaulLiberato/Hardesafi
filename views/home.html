@@ -19,6 +19,9 @@
 
     <!-- Meu CSS-->
     <link rel="stylesheet" href="../estilo/estilo-home.css">
+
+    <!-- Responsivo -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     
     <title>Hardesafi - Home</title>
   </head>
@@ -30,9 +33,11 @@
         <div class="nav-vertical">
 
             <div class="buttons">
+              <div>
                 <button><i class="fas fa-bell fa-2x blackiconcolor"></i></button>
                 <button><i class="fas fa-calendar fa-2x blackiconcolor"></i></button>
                 <button><i class="fas fa-clone fa-2x blackiconcolor"></i></button>
+              </div>
                 <button id="settings"><i class="fas fa-cog fa-2x blackiconcolor"></i></button>
             </div>
 
@@ -51,6 +56,20 @@
                 </div>
 
                 <img src="../estilo/img/perfil.png">
+
+                <div class="dropdown">
+                  <button class="btn btn-secondary button-drop" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">notification</a></li>
+                    <li><a class="dropdown-item" href="#">calendar</a></li>
+                    <li><a class="dropdown-item" href="#">copy</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">settings</a></li>
+                  </ul>
+                </div>
             </div>
 
             <div class="content">
@@ -78,7 +97,7 @@
                         <th scope="col">start</th>
                         <th scope="col">end</th>
                         <th scope="col">description</th>
-                        <th id="actions" colspan="2" scope="col">actions</th>
+                        <th id="actions" colspan="3" scope="col">actions</th>
                       </tr>                  
                     </thead>
 
@@ -114,13 +133,13 @@
     <div class="modal-dialog" id="myModal">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">new challenge</h5>
+          <h5 class="modal-title title-modal" id="staticBackdropLabel">new challenge</h5>
           <button type="button" id="button-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
           <form action="" id='formularioChallenge'>
-            <div class="input-group mb-4">
+            <div class="input-group id mb-4">
               <input type="number" id="id" name="id" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
             </div>
   
@@ -153,17 +172,31 @@
               <button type="reset" id="btnCancelEdit" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
               <button type="button" id="btnEdit" class="btn btn-success" data-bs-dismiss="modal">edit</button>
             </div>
-
-            <div class="modal-footer delete" id="delete">
-              <button type="reset" id="btnCancelDelete" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
-              <button type="button" id="btnDelete" class="btn btn-danger" data-bs-dismiss="modal">delete</button>
-            </div>
           </form>
 
         </div>
       </div>
     </div>
   </div>
+
+<!-- Modal Confirm-->
+<div class="modal fade" id="modalConfirm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">do you really want to delete this challenge?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>this action is irreversible</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnDelete">delete</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Meu Java Script-->
   <script src="../scripts/home.js"></script>
