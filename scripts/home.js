@@ -14,19 +14,19 @@ var divModalConfirm = document.getElementById("modalConfirm")
 divEdit.classList.add('hidden')
 
 //evento apos o botão de save ser apertado
-document.getElementById("btnSave").addEventListener("click",adicionarDesafio);
+document.getElementById("btnSave").addEventListener("click", adicionarDesafio);
 
 //evento apos o botão de abrir o formulario ser apertado
-document.getElementById("addChallenge").addEventListener("click",colocaId);
+document.getElementById("addChallenge").addEventListener("click", colocaId);
 
 //evento apos o botão de cancelar do save ser apertado
-document.getElementById("btnCancelSave").addEventListener("click",removeErro);
+document.getElementById("btnCancelSave").addEventListener("click", removeErro);
 
 //evento apos o botão de cencelar do edit ser apertado
-document.getElementById("btnCancelEdit").addEventListener("click",removeErro);
+document.getElementById("btnCancelEdit").addEventListener("click", removeErro);
 
 //evento apos o botão de close ser apertado
-document.getElementById("button-close").addEventListener("click",limpaform);
+document.getElementById("button-close").addEventListener("click", limpaform);
 
 
 //pega o botao edit
@@ -42,12 +42,13 @@ var tbody = document.getElementsByTagName("tbody")[0]
 var titleModal = document.getElementById("staticBackdropLabel")
 
 //carrega os desafios ja inseridos
-function carregaDesafios(){
+function carregaDesafios() {
 
-    const keys = Object.keys(localStorage);
+
+    const keys = Object.keys(localStorage).filter((value) => value.startsWith("desafio"));
     var lastId
 
-    for(const key of keys){
+    for (const key of keys) {
 
         objetoEmFormatoDeString = localStorage.getItem(key);
 
@@ -60,12 +61,12 @@ function carregaDesafios(){
 
     idAtual = Object.values(keys)[3]
 
-    if(!lastId){
+    if (!lastId) {
         lastId = 0;
     }
-    
+
     //pega apenas o id
-    idAtual =  lastId + 1;
+    idAtual = lastId + 1;
     console.log(idAtual)
 }
 
@@ -73,12 +74,12 @@ function carregaDesafios(){
 carregaDesafios()
 
 //pega todos os valores do formulario
-function pegaValores(){
+function pegaValores() {
 
     var formData = new FormData(form)
 
     var desafio = {}
-    
+
     for (var i of formData.entries()) {
         desafio[i[0]] = i[1]
     }
@@ -87,21 +88,21 @@ function pegaValores(){
 }
 
 //coloca o id a input
-function colocaId(){
+function colocaId() {
 
-    if(!idAtual){
+    if (!idAtual) {
         var inputId = document.getElementById("id")
         inputId.value = 1
         idAtual = 1
-    }else{
+    } else {
         var inputId = document.getElementById("id")
         inputId.value = idAtual
     }
-    
+
 }
 
 //cria a tabela para receber os dados
-function criaTabela(desafio){
+function criaTabela(desafio) {
 
     let novaLinha = document.createElement('tr')
 
@@ -111,8 +112,8 @@ function criaTabela(desafio){
     //tudo do botao editar
     let editIcon = document.createElement('i')
     var botaoEditar = document.createElement('BUTTON')
-    botaoEditar.setAttribute('data-bs-toggle','modal');
-    botaoEditar.setAttribute('data-bs-target','#modalForm');
+    botaoEditar.setAttribute('data-bs-toggle', 'modal');
+    botaoEditar.setAttribute('data-bs-target', '#modalForm');
 
     //pega o botao e adicona o id respectivo
     botaoEditar.id = `button_desafio_${desafio.id}`
@@ -123,8 +124,8 @@ function criaTabela(desafio){
     //tudo do botao excluir
     let deleteIcon = document.createElement('i')
     var botaoExcluir = document.createElement('BUTTON')
-    botaoExcluir.setAttribute('data-bs-toggle','modal');
-    botaoExcluir.setAttribute('data-bs-target','#modalConfirm');
+    botaoExcluir.setAttribute('data-bs-toggle', 'modal');
+    botaoExcluir.setAttribute('data-bs-target', '#modalConfirm');
 
     //pega o botao e adicona o id respectivo
     botaoExcluir.id = `button_desafio_${desafio.id}`
@@ -132,13 +133,13 @@ function criaTabela(desafio){
     let tdExcluir = document.createElement('td')
     tdExcluir.id = `td_delete_desafio_${desafio.id}`
 
-    botaoEditar.setAttribute('data-bs-toggle','modal');
-    botaoEditar.setAttribute('data-bs-target','#modalForm');
+    botaoEditar.setAttribute('data-bs-toggle', 'modal');
+    botaoEditar.setAttribute('data-bs-target', '#modalForm');
 
     //tudo do drop donw
     var dropButton = document.createElement('BUTTON')
-    dropButton.setAttribute('data-bs-toggle','dropdown');
-    dropButton.classList.add("btn","dropdown-toggle","button-down","font-size")
+    dropButton.setAttribute('data-bs-toggle', 'dropdown');
+    dropButton.classList.add("btn", "dropdown-toggle", "button-down", "font-size")
 
     dropButton.id = `drop_button_desafio_${desafio.id}`
 
@@ -146,29 +147,29 @@ function criaTabela(desafio){
     tddrop.classList.add('dropdown')
 
     let ulDrop = document.createElement('ul')
-    ulDrop.setAttribute('aria-labelledby',`drop_button_desafio_${desafio.id}`)
-    ulDrop.classList.add("dropdown-menu","ul-drop","ul-style")
+    ulDrop.setAttribute('aria-labelledby', `drop_button_desafio_${desafio.id}`)
+    ulDrop.classList.add("dropdown-menu", "ul-drop", "ul-style")
 
     let liEdit = document.createElement('li')
     let aEdit = document.createElement('a')
     aEdit.classList.add("dropdown-item")
     aEdit.innerHTML = "edit"
-    aEdit.setAttribute('data-bs-toggle','modal')
-    aEdit.setAttribute('data-bs-target','#modalForm')
+    aEdit.setAttribute('data-bs-toggle', 'modal')
+    aEdit.setAttribute('data-bs-target', '#modalForm')
     aEdit.id = `a_edit_desafio_${desafio.id}`
 
     let liDelete = document.createElement('li')
     let aDelete = document.createElement('a')
     aDelete.classList.add("dropdown-item")
     aDelete.innerHTML = "delete"
-    aDelete.setAttribute('data-bs-toggle','modal')
-    aDelete.setAttribute('data-bs-target','#modalConfirm')
+    aDelete.setAttribute('data-bs-toggle', 'modal')
+    aDelete.setAttribute('data-bs-target', '#modalConfirm')
     aDelete.id = `a_delete_desafio_${desafio.id}`
 
     dropButton.innerHTML = "actions"
-   
+
     //adciona os valores do formulario a nova linha da tabela
-    for(key of Object.keys(desafio)){
+    for (key of Object.keys(desafio)) {
         let novaColuna = document.createElement('td')
 
         novaColuna.textContent = desafio[key]
@@ -183,29 +184,29 @@ function criaTabela(desafio){
         editarDesafio(ev)
     }
 
-    aEdit.onclick = (ev) =>{
+    aEdit.onclick = (ev) => {
         titleModal.textContent = "edit challenge";
 
         editarDesafio(ev)
     }
- 
+
     botaoExcluir.onclick = (ev) => {
         titleModal.textContent = "delete challenge";
 
         excluirDesafio(ev)
     }
 
-    aDelete.onclick = (ev) =>{
+    aDelete.onclick = (ev) => {
         titleModal.textContent = "delete challenge";
 
         excluirDesafio(ev)
     }
 
-    editIcon.classList.add('fas','fa-pen','fa-lg')
-    deleteIcon.classList.add('fas','fa-trash-alt','fa-lg')
+    editIcon.classList.add('fas', 'fa-pen', 'fa-lg')
+    deleteIcon.classList.add('fas', 'fa-trash-alt', 'fa-lg')
 
-    botaoEditar.classList.add('button-edit','button-edit:hover')
-    botaoExcluir.classList.add('button-delet','button-delet:hover')
+    botaoEditar.classList.add('button-edit', 'button-edit:hover')
+    botaoExcluir.classList.add('button-delet', 'button-delet:hover')
 
     let body = document.getElementsByClassName("body")
 
@@ -232,7 +233,7 @@ function criaTabela(desafio){
 
     tbody.appendChild(novaLinha)
 
-    if(largura <= 425){
+    if (largura <= 425) {
         tddrop.classList.remove("hidden-table")
         dropButton.classList.remove("button-down")
         ulDrop.classList.remove("ul-drop")
@@ -240,13 +241,12 @@ function criaTabela(desafio){
 }
 
 //adciona nova linha a tabela
-function adicionarDesafio(){
+function adicionarDesafio() {
     var desafio = pegaValores()
 
-    if(!desafio.title && !desafio.start && !desafio.end && !desafio.description){
-        
-    } 
-    else{
+    if (!desafio.title && !desafio.start && !desafio.end && !desafio.description) {
+
+    } else {
 
         localStorage.setItem(`desafio_${idAtual}`, JSON.stringify(desafio));
 
@@ -286,14 +286,14 @@ function editarDesafio(ev) {
         let nomeCampo = idElemento.slice(13, idElemento.length)
 
         //atribui os valores da tabela no formulario
-        if(form[nomeCampo]) {
+        if (form[nomeCampo]) {
             form[nomeCampo].value = valores[i].innerHTML;
         }
         console.log(localId)
     }
 
     //quando o botao de confirmacao edit for pressionado
-    btnEdit.onclick = (ev) =>{
+    btnEdit.onclick = (ev) => {
 
         //pega os valores do formulario
         let desafio = pegaValores();
@@ -308,17 +308,17 @@ function editarDesafio(ev) {
 
         console.log(Object.values(desafioLocalStorage))
 
-        for(let i of Object.values(desafioLocalStorage)){
+        for (let i of Object.values(desafioLocalStorage)) {
             localStorage.setItem(`desafio_${localId}`, JSON.stringify(desafio))
         }
 
         limpaform()
         removeErro()
-    } 
+    }
 }
 
 //exclui um desafio
-function excluirDesafio(ev){
+function excluirDesafio(ev) {
 
     divSave.classList.add('hidden')
 
@@ -345,35 +345,35 @@ function excluirDesafio(ev){
         let nomeCampo = idElemento.slice(13, idElemento.length);
 
         //atribui os valores da tabela no formulario
-        if(form[nomeCampo]) {
+        if (form[nomeCampo]) {
             form[nomeCampo].value = valores[i].innerHTML;
         }
     }
 
     //quando o botao de confirmacao edit for pressionado
     btnDelete.onclick = function (ev) {
-        
+
 
         tbody.removeChild(td[0])
         localStorage.removeItem(`desafio_${localId}`)
 
         limpaform()
         removeErro()
-    } 
+    }
 }
 
 //valida as inputs
-function verificaNulo(desafio){
+function verificaNulo(desafio) {
     form.classList.add('was-validated')
 }
 
 //adciona o id no formulario
-function adicionarId(){
+function adicionarId() {
     formularioChallenge["id"].value = idAtual
 }
 
 //remove o erro das inputs do formulario
-function removeErro(){
+function removeErro() {
     titleModal.textContent = "new challenge";
 
     form.classList.remove('was-validated')
@@ -382,7 +382,7 @@ function removeErro(){
 }
 
 //limpa as inputs do formulario
-function limpaform(){
+function limpaform() {
     titleModal.textContent = "new challenge";
 
     formularioChallenge.reset()

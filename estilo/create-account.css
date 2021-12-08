@@ -1,0 +1,128 @@
+:root {
+    --background-color: #2e2756;
+    --text-title-color: #ffffff;
+    --background-form-login-color: #433e5a;
+    --background-input-login-color: #c4c4c4;
+    --text-input-color: #4a4a4a;
+    --text-link-color: #b8b8b8;
+    --button-save-color: #36a634;
+    --button-clean-color: #cf1717;
+    --error-input-form-color: #f9c9c9;
+    --background-home-color: #f0eff6;
+    --hover-menu-color: #2e236b;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    margin: 0%;
+    font-family: "Fredoka One", cursive;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .background {
+    background-image: url(./img/background.png);
+    background-size: 100%;
+    width: 100%;
+    height: 45rem;
+    border-radius: 20px;
+  }
+
+  .arrow button{
+    color: var(--text-title-color);
+    border: none;
+    background-color: var(--background-color);
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+  
+  .titulo {
+    color: var(--text-title-color);
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  
+  .titulo p {
+    margin: 0px;
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+  
+  #tm {
+    font-size: 1rem;
+    padding-top: 10px;
+  }
+
+  .creat{
+    color: var(--text-title-color);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .formulario {
+    display: flex;
+    background-color: var(--background-form-login-color);
+    border-radius: 20px;
+    width: 30%;
+    height: 21rem;
+    margin: 2rem auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formulario form {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .formulario input {
+    border-radius: 15px;
+    width: 100%;
+    border: 0px;
+  }
+  
+  .form-control:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 8px rgba(255, 255, 255, 0.6);
+  }
+  
+  .form-control:invalid {
+    border-color: var(--button-clean-color);
+  }
+  
+  .senha {
+    margin-top: 1rem;
+  }
+  
+  .formulario button {
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: #f6f6f6;
+    color: var(--text-input-color);
+    border: #f6f6f6;
+  }
+  
+  .formulario button:hover {
+    background-color: var(--text-input-color);
+    color: #f6f6f6;
+  }
+  
+  .formulario button:focus {
+    background-color: var(--text-input-color);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 8px rgba(255, 255, 255, 0.6);
+  }

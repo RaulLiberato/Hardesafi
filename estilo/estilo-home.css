@@ -652,12 +652,7 @@ td:nth-child(8) {
     font-size: 0.7rem;
     padding: 0px;
   }
-
-  .ul-style {}
-
-  .size {
-  }
-
+  
   .dropdown-menu {
     min-width: 0rem !important;
   }

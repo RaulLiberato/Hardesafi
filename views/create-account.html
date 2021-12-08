@@ -14,22 +14,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Meu CSS-->
-    <link rel="stylesheet" href="../estilo/estilo-login.css">
+    <link rel="stylesheet" href="../estilo/create-account.css">
     
-    <title>Hardesafi - Login</title>
+    <title>Hardesafi - Create account</title>
   </head>
 
   <body>
 
     <div class="container">
-
+      
         <div class="background">
+
+          <div class="arrow">
+            <button id="arrow"><i class="fas fa-arrow-left"></i></button>
+          </div>
 
             <div class="titulo">
               <p>Hardesafi</p>
               <p id="tm">tm</p>
             </div><!-- Fim do title -->
+
+            
+
+            <div class="creat">
+              <p>create account</p>
+            </div>
 
             <div class="formulario">
               <form id="formularioLogin">
@@ -42,19 +55,14 @@
                   <input type="password" class="form-control" placeholder="password" id="senha" name="senha" required>
                   <label for="floatingInput">password</label>
                 </div>
-                <button type="button" class="btn btn-primary" id="logIn">log in</button>
+
+                <div class="form-floating senha">
+                    <input type="password" class="form-control" placeholder="password" id="senhaConfirma" name="senhaConfirma" required>
+                    <label for="floatingInput">confirm password</label>
+                  </div>
+                <button type="button" class="btn btn-primary" id="create">create</button>
               </form>
             </div>
-
-            <a href="../views/create-account.html">create your account now</a>
-
-            <div class="or">
-              <hr>
-              <p>or</p>
-              <hr>
-            </div>
-
-            <a href="">forgot your password?</a>
 
         </div><!-- Fim do background -->
 
@@ -73,6 +81,6 @@
   </body>
 
   <!-- Meu Java Script-->
-  <script src="../scripts/login.js"></script>
+  <script src="../scripts/create-account.js"></script>
 
 </html>
